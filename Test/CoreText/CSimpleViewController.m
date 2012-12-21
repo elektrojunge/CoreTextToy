@@ -53,7 +53,7 @@
 	[theText appendAttributedString:[[NSAttributedString alloc] initWithString:@" Did it work?"]];
 
 
-    self.label.text = theText;
+    self.label.attributedText = theText;
 	self.label.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
 
 	self.label.lineBreakMode = UILineBreakModeWordWrap;

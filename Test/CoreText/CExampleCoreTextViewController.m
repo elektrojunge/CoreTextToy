@@ -70,7 +70,7 @@
 
     // #########################################################################
 
-    self.label4.text = [[NSAttributedString alloc] initWithString:@"This is a highlighted CCoreTextLabel with a shadow"];
+    self.label4.attributedText = [[NSAttributedString alloc] initWithString:@"This is a highlighted CCoreTextLabel with a shadow"];
     self.label4.backgroundColor = [UIColor grayColor];
     self.label4.textColor = [UIColor blackColor];
     self.label4.highlighted = YES;
@@ -90,7 +90,7 @@
 
     NSURL *theURL = [[NSBundle mainBundle] URLForResource:@"Lorem" withExtension:@"txt"];
     NSString *theString = [NSString stringWithContentsOfURL:theURL encoding:NSUTF8StringEncoding error:NULL];
-    self.label6.text = [[NSAttributedString alloc] initWithString:theString];
+    self.label6.attributedText = [[NSAttributedString alloc] initWithString:theString];
     self.label6.insets = (UIEdgeInsets){ .left = 20, .top = 20, .right = 20, .bottom = 20 };
     self.label6.lineBreakMode = UILineBreakModeWordWrap;
     self.label6.backgroundColor = [UIColor grayColor];

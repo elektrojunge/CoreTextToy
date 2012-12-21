@@ -92,7 +92,7 @@
         }
 
     self.attributedView.text = [theAttributedString betterDescription];
-    self.previewView.text = theAttributedString;
+    self.previewView.attributedText = theAttributedString;
     }
 
 @end

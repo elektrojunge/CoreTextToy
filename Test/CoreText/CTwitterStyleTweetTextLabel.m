@@ -48,7 +48,7 @@
     if (_linkRanges == NULL)
         {
         NSMutableArray *theRanges = [NSMutableArray array];
-        [self.text enumerateAttribute:kMarkupLinkAttributeName inRange:(NSRange){ .length = self.text.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        [self.attributedText enumerateAttribute:kMarkupLinkAttributeName inRange:(NSRange){ .length = self.text.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
             if (value != NULL)
                 {
                 [theRanges addObject:[NSValue valueWithRange:range]];
