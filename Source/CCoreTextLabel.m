@@ -154,21 +154,21 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
 
 #pragma mark -
 
-- (NSString *)plainText
+- (NSString *)text
 	{
-	return(self.text.string);
+	return(self.attributedText.string);
 	}
 
-- (void)setPlainText:(NSString *)plainText
+- (void)setText:(NSString *)plainText
 	{
-	self.text = [[NSAttributedString alloc] initWithString:plainText];
+	self.attributedText = [[NSAttributedString alloc] initWithString:plainText];
 	}
 
-- (void)setText:(NSAttributedString *)inText
+- (void)setAttributedText:(NSAttributedString *)inText
     {
-    if (_text != inText)
+    if (_attributedText != inText)
         {
-        _text = inText;
+        _attributedText = inText;
 
         self.accessibilityLabel = inText.string;
         
@@ -322,13 +322,13 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
     {
     if (_renderer == NULL)
         {
-		if (self.text == NULL)
+		if (self.attributedText == NULL)
 			{
 			// Bail early...
 			return(NULL);
 			}
 
-        NSMutableAttributedString *theNormalizedText = [[[self class] normalizeString:self.text settings:self] mutableCopy];
+        NSMutableAttributedString *theNormalizedText = [[[self class] normalizeString:self.attributedText settings:self] mutableCopy];
 
         CGRect theBounds = self.bounds;
         theBounds = UIEdgeInsetsInsetRect(theBounds, self.insets);
@@ -432,7 +432,7 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
 
 - (CGSize)intrinsicContentSize
 	{
-	CGSize theSize = [[self class ] sizeForString:self.text font:self.font alignment:self.textAlignment lineBreakMode:self.lineBreakMode contentInsets:self.insets thatFits:(CGSize){ self.preferredMaxLayoutWidth, CGFLOAT_MAX }];
+	CGSize theSize = [[self class ] sizeForString:self.attributedText font:self.font alignment:self.textAlignment lineBreakMode:self.lineBreakMode contentInsets:self.insets thatFits:(CGSize){ self.preferredMaxLayoutWidth, CGFLOAT_MAX }];
 	return(theSize);
 	}
 
@@ -470,7 +470,7 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
 	{
 	NSMutableArray *theAttachmentViews = [self.attachmentViews mutableCopy];
 
-	[self.text enumerateAttribute:kMarkupAttachmentAttributeName inRange:(NSRange){ .length = self.text.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+	[self.attributedText enumerateAttribute:kMarkupAttachmentAttributeName inRange:(NSRange){ .length = self.attributedText.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
 		if (value)
 			{
 			CCoreTextAttachment *theAttachment = value;

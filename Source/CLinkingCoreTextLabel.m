@@ -41,14 +41,14 @@
     return(self);
     }
 
-- (void)setText:(NSAttributedString *)inText
+- (void)setAttributedText:(NSAttributedString *)inText
     {
-    if (self.text != inText)
+    if (self.attributedText != inText)
         {
-        [super setText:inText];
+        [super setAttributedText:inText];
         
         NSMutableArray *theRanges = [NSMutableArray array];
-        [self.text enumerateAttribute:kMarkupLinkAttributeName inRange:(NSRange){ .length = self.text.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        [self.attributedText enumerateAttribute:kMarkupLinkAttributeName inRange:(NSRange){ .length = self.attributedText.length } options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
             if (value != NULL)
                 {
                 [theRanges addObject:[NSValue valueWithRange:range]];
