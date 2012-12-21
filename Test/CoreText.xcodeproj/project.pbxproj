@@ -26,6 +26,7 @@
 		45920521145A6A9700DECA27 /* CTwitterStyleTweetTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45920520145A6A9700DECA27 /* CTwitterStyleTweetTextLabel.m */; };
 		4593F75914C7C0A300F78F92 /* CLinkingCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4593F75814C7C0A300F78F92 /* CLinkingCoreTextLabel.m */; };
 		4593F76614C7D01D00F78F92 /* NSAttributedString_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4593F76514C7D01D00F78F92 /* NSAttributedString_Extensions.m */; };
+		45AB2C7B1685135B0089773A /* CAutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB2C7A1685135B0089773A /* CAutolayoutViewController.m */; };
 		45DEC480142BBEDB009FBCC6 /* CCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DEC477142BBEDB009FBCC6 /* CCoreTextLabel.m */; };
 		45DEC481142BBEDB009FBCC6 /* CMarkupValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DEC479142BBEDB009FBCC6 /* CMarkupValueTransformer.m */; };
 		45DEC482142BBEDB009FBCC6 /* CSimpleHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DEC47B142BBEDB009FBCC6 /* CSimpleHTMLParser.m */; };
@@ -74,6 +75,8 @@
 		4593F75814C7C0A300F78F92 /* CLinkingCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLinkingCoreTextLabel.m; sourceTree = "<group>"; };
 		4593F76414C7D01D00F78F92 /* NSAttributedString_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString_Extensions.h; sourceTree = "<group>"; };
 		4593F76514C7D01D00F78F92 /* NSAttributedString_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString_Extensions.m; sourceTree = "<group>"; };
+		45AB2C791685135B0089773A /* CAutolayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAutolayoutViewController.h; sourceTree = "<group>"; };
+		45AB2C7A1685135B0089773A /* CAutolayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAutolayoutViewController.m; sourceTree = "<group>"; };
 		45DEC476142BBEDB009FBCC6 /* CCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCoreTextLabel.h; sourceTree = "<group>"; };
 		45DEC477142BBEDB009FBCC6 /* CCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCoreTextLabel.m; sourceTree = "<group>"; };
 		45DEC478142BBEDB009FBCC6 /* CMarkupValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMarkupValueTransformer.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				4548A9F5145B2422001C5654 /* CResizerThumb.m */,
 				45161E8C1635E14600E74EF1 /* CSimpleViewController.h */,
 				45161E8D1635E14600E74EF1 /* CSimpleViewController.m */,
+				45AB2C791685135B0089773A /* CAutolayoutViewController.h */,
+				45AB2C7A1685135B0089773A /* CAutolayoutViewController.m */,
 				453427E914C64D1D00E1D75E /* Lorem.txt */,
 				455C9FCD14548BDC0098B70F /* reply-badge.png */,
 				4571656214D1B7CB00FF71FA /* AtWork.gif */,
@@ -334,6 +339,7 @@
 				4593F76614C7D01D00F78F92 /* NSAttributedString_Extensions.m in Sources */,
 				45161E8E1635E14600E74EF1 /* CSimpleViewController.m in Sources */,
 				45FB0A38163762A70093F35B /* UIImage+AnimatedConveniences.m in Sources */,
+				45AB2C7B1685135B0089773A /* CAutolayoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
