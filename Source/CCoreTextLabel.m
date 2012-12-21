@@ -161,7 +161,7 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
 
 - (void)setText:(NSString *)plainText
 	{
-	self.attributedText = [[NSAttributedString alloc] initWithString:plainText];
+	self.attributedText = plainText ? [[NSAttributedString alloc] initWithString:plainText] : NULL;
 	}
 
 - (void)setAttributedText:(NSAttributedString *)inText
