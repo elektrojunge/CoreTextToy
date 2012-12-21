@@ -58,7 +58,7 @@
     // On iOS 5.0 the function `CTFramesetterSuggestFrameSizeWithConstraints` returns rounded float values (e.g. "15.0").
     // Prior to iOS 5.0 the function returns float values (e.g. "14.7").
     // Make sure the return value for `sizeForString:thatFits:" is equal for both versions:
-    theSize = (CGSize){ .width = roundf(theSize.width), .height = roundf(theSize.height) };
+    theSize = (CGSize){ .width = ceilf(theSize.width), .height = ceilf(theSize.height) };
         
     return(theSize);
     }
