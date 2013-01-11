@@ -432,8 +432,15 @@ static CTTextAlignment CTTextAlignmentForNSTextAlignment(NSTextAlignment inAlign
 
 - (CGSize)intrinsicContentSize
 	{
-	CGSize theSize = [[self class ] sizeForString:self.attributedText font:self.font alignment:self.textAlignment lineBreakMode:self.lineBreakMode contentInsets:self.insets thatFits:(CGSize){ self.preferredMaxLayoutWidth, CGFLOAT_MAX }];
-	return(theSize);
+	if (self.attributedText == NULL)
+		{
+		return(CGSizeZero);
+		}
+	else
+		{
+		CGSize theSize = [[self class ] sizeForString:self.attributedText font:self.font alignment:self.textAlignment lineBreakMode:self.lineBreakMode contentInsets:self.insets thatFits:(CGSize){ self.preferredMaxLayoutWidth, CGFLOAT_MAX }];
+		return(theSize);
+		}
 	}
 
 #pragma mark -
